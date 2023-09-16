@@ -18,4 +18,4 @@ jobs:
     permissions:
       contents: write
       packages: write
-    uses: "smc-workflow/terraform-workflows/.github/workflows/terraform-module-release.yml@v2"
+    uses: "smc-workflow/terraform-workflows/.github/workflows/terraform-module-release.yml@v3"
