@@ -1,0 +1,44 @@
+version: 2
+
+registries:
+  github-smc-workflow:
+    type: git
+    url: https://github.com
+    username: mw8er
+    password: ${{secrets.SMC_WORKFLOW_READER}}
+
+  github-smc-terraform:
+    type: git
+    url: https://github.com
+    username: mw8er
+    password: ${{secrets.SMC_WORKFLOW_READER}}
+
+updates:
+  # Maintain dependencies for Docker
+  - package-ecosystem: "docker"
+    directory: "/src/.devcontainer"
+    schedule:
+      interval: "weekly"
+
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    registries:
+      - github-smc-workflow
+    schedule:
+      interval: "weekly"
+
+  # Maintain dependencies for terraform
+  - package-ecosystem: "terraform"
+    directory: "/"
+    registries:
+      - github-smc-terraform
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "terraform"
+    directory: "/tests/defaults"
+    registries:
+      - github-smc-terraform
+    schedule:
+      interval: "daily"

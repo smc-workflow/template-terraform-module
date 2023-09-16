@@ -1,0 +1,21 @@
+name: Terraform Module Release
+
+concurrency:
+  group: "${{ github.ref }}/terraform_release"
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  call-terrraform:
+    permissions:
+      contents: write
+      packages: write
+    uses: "smc-workflow/terraform-workflows/.github/workflows/terraform-module-release.yml@v2"
