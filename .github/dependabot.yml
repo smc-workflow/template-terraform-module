@@ -16,7 +16,7 @@ registries:
 updates:
   # Maintain dependencies for Docker
   - package-ecosystem: "docker"
-    directory: "/src/.devcontainer"
+    directory: "/.devcontainer"
     schedule:
       interval: "weekly"
 
