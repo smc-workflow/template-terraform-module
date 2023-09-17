@@ -15,6 +15,8 @@ crash.*.log
 # to change depending on the environment.
 *.tfvars
 *.tfvars.json
+!*.auto.tfvars
+!*.auto.tfvars.json
 
 # Ignore override files as they are usually used to override resources locally and so
 # are not checked in
@@ -28,7 +30,17 @@ override.tf.json
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
+tfplan
+tfplan.json
+tfplan.txt
 
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Ignore Terraform lock files
+.terraform.lock.hcl
+
+# Ignore credentials file
+.credentials
+
