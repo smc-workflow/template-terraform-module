@@ -36,9 +36,9 @@ updates:
     schedule:
       interval: "daily"
 
-  - package-ecosystem: "terraform"
-    directory: "/tests/defaults"
-    registries:
-      - github-smc-terraform
-    schedule:
-      interval: "daily"
+  # - package-ecosystem: "terraform"
+  #   directory: "/tests/defaults"
+  #   registries:
+  #     - github-smc-terraform
+  #   schedule:
+  #     interval: "daily"
