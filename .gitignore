@@ -38,9 +38,6 @@ tfplan.txt
 .terraformrc
 terraform.rc
 
-# Ignore Terraform lock files
-.terraform.lock.hcl
-
 # Ignore credentials file
 .credentials
 
